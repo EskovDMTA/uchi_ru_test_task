@@ -12,6 +12,9 @@ gem "pg", "~> 1.1"
 gem "puma", ">= 5.0"
 
 gem 'grape'
+gem 'grape-entity'
+gem 'grape_on_rails_routes'
+gem 'faker'
 
 gem 'rswag-ui'
 

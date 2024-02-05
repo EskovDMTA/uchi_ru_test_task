@@ -3,15 +3,15 @@ info:
   title: API сервиса для тестового задания
   version: 0.1.0
 tags:
-  - name: students
+  - name: students.rb
     description: Всё что касается учеников
   - name: classes
     description: Всё что касается классов
 paths:
-  /api/v1/students:
+  /students:
     post:
       tags:
-        - students
+        - students.rb
       summary: Регистрация нового студента
       operationId: createStudent
       requestBody:
@@ -36,7 +36,7 @@ paths:
                 $ref: '#/components/schemas/Student'
         '405':
           description: Invalid input
-  /api/v1/students/{user_id}:
+  /students/{user_id}:
     parameters:
       - name: user_id
         description: id студента
@@ -47,7 +47,7 @@ paths:
           format: int64
     delete:
       tags:
-        - students
+        - students.rb
       summary: Удалить студента
       operationId: deleteStudent
       security:
@@ -58,13 +58,13 @@ paths:
         '401':
           description: Некорректная авторизация
 
-  /api/v1/schools/{school_id}/classes/{class_id}/students:
+  /schools/{school_id}/classes/{class_id}/students:
     parameters:
       - $ref: '#/components/parameters/school_id'
       - $ref: '#/components/parameters/class_id'
     get:
       tags:
-        - students
+        - students.rb
         - classes
       summary: Вывести список студентов класса
       operationId: getClassStudentList
@@ -83,7 +83,7 @@ paths:
 
 
 
-  /api/v1/schools/{school_id}/classes:
+  /schools/{school_id}/classes:
     parameters:
       - $ref: '#/components/parameters/school_id'
     get:
