@@ -11,7 +11,7 @@ module V1
 
       post do
         student = StudentsService.create_student(params)
-        present student
+        present student, with: Entities::Student
       end
 
       params do

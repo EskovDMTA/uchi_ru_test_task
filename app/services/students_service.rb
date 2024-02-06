@@ -4,7 +4,7 @@ class StudentsService
       first_name: params[:first_name],
       last_name: params[:last_name],
       surname: params[:surname],
-      school_class_id: params[:school_class_id],
+      school_class_id: params[:class_id],
       school_id: params[:school_id]
     )
   end
