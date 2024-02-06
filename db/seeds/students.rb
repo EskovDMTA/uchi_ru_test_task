@@ -7,7 +7,7 @@ def create_students
           first_name: Faker::Name.first_name,
           last_name: Faker::Name.last_name,
           surname: Faker::Name.middle_name,
-          school_class:,
+          school_class: school_class,
           school_id: index + 1
         }
       end

@@ -3,7 +3,7 @@ info:
   title: API сервиса для тестового задания
   version: 0.1.0
 tags:
-  - name: students.rb
+  - name: students
     description: Всё что касается учеников
   - name: classes
     description: Всё что касается классов
@@ -11,7 +11,7 @@ paths:
   /students:
     post:
       tags:
-        - students.rb
+        - students
       summary: Регистрация нового студента
       operationId: createStudent
       requestBody:
@@ -47,7 +47,7 @@ paths:
           format: int64
     delete:
       tags:
-        - students.rb
+        - students
       summary: Удалить студента
       operationId: deleteStudent
       security:
@@ -64,7 +64,7 @@ paths:
       - $ref: '#/components/parameters/class_id'
     get:
       tags:
-        - students.rb
+        - students
         - classes
       summary: Вывести список студентов класса
       operationId: getClassStudentList

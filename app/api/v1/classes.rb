@@ -5,7 +5,7 @@ module V1
         resource :classes do
           get do
             school_classes = SchoolClassesService.list_classes_for_school(params[:school_id])
-            present school_classes, with: Entities::SchoolClass
+            present :data, school_classes[:data], with: Entities::SchoolClass
           end
 
           route_param :school_class_id do
