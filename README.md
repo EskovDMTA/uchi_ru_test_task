@@ -2,17 +2,16 @@
 
 Задание выполненно по [техническому заданию ](https://github.com/uchiru/internship-api-schema-task)
 
-## Технологии
+### Технологии
+
 - Ruby on Rails
-   - Grape
-   - Minitest
-   - Rubocop
+    - Grape
+    - Minitest
+    - Rubocop
 - Docker
 - PostgreSQL
 
-## Установка и Запуск с Docker
-
-Для работы с проектом необходимо иметь установленные Docker и Docker Compose. Следуйте инструкциям ниже для запуска проекта:
+## Установка и запуск проекта
 
 1. Склонируйте репозиторий:
 
@@ -20,8 +19,17 @@
    git clone git@github.com:EskovDMTA/uchi_ru_test_task.git
    cd uchi_ru_test_task
 
-2. Запустите проект с помощью Docker:
+2. Для настройки переменных окружения необходимо создать файл `.env` в корне проекта. Этот файл будет содержать
+   конфигурации, необходимые для работы приложения, включая подключение к базе данных.
+Создайте файл `.env` с использованием любого текстового редактора и добавьте в него следующие строки:
 
+    ```plaintext
+    DATABASE_HOST=database
+    DATABASE_USERNAME=postgres
+    DATABASE_PASSWORD=postgres
+
+
+3. Запустите проект с помощью Docker:
    ```sh
    docker-compose up
 
