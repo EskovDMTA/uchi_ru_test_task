@@ -49,6 +49,9 @@ group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
   gem 'minitest'
   gem 'rack-test'
+  gem 'rubocop'
+  gem 'rubocop-minitest', require: false
+  gem 'rubocop-rails', require: false
 end
 
 group :development do

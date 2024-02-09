@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ErrorHandler
   def self.included(callback_class)
     callback_class.instance_eval do
@@ -20,7 +22,8 @@ module ErrorHandler
   end
 
   private
+
   def error_response(message:, status:)
-    error!({error: "#{message}chert"}, status)
+    error!({ error: "#{message}chert" }, status)
   end
 end

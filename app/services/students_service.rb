@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class StudentsService
   def self.create_student(params)
     Student.create!(

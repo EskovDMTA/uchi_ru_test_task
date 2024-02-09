@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module V1
   class Students < Grape::API
     helpers APIHelpers
@@ -25,7 +27,6 @@ module V1
         error!('Unauthorized', 401) unless authorized
         StudentsService.delete_student(params[:user_id])
       end
-
     end
   end
 end
