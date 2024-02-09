@@ -28,4 +28,14 @@ class StudentsAPITest < ActiveSupport::TestCase
       delete "/students/#{@student.id}"
     end
   end
+
+  test "should delete student with authentication token" do
+
+    assert_difference('Student.count', -1) do
+      token = Authenticator.issue_token(@student.id)
+      delete "/students/#{@student.id.to_i}", headers: { 'X-Auth-Token' => token }
+      puts last_response.inspect
+    end
+  end
+
 end
