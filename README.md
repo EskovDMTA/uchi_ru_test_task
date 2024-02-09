@@ -20,12 +20,7 @@
    git clone git@github.com:EskovDMTA/uchi_ru_test_task.git
    cd uchi_ru_test_task
 
-2. Соберите Docker контейнер:
-
-   ```sh
-   docker-compose build
-
-3. Запустите проект:
+2. Запустите проект с помощью Docker:
 
    ```sh
    docker-compose up
