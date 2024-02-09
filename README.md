@@ -1,24 +1,51 @@
-# README
+# Тестовое задания на вакансию "Стажёр Backend Developer в команду GR" [![uchi.ru](./uchi_ru_logo.svg)](https://uchi.ru/)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Задание выполненно по [техническому заданию ](https://github.com/uchiru/internship-api-schema-task)
 
-Things you may want to cover:
+## Технологии
+- Ruby on Rails
+   - Grape
+   - Minitest
+   - Rubocop
+- Docker
+- PostgreSQL
 
-* Ruby version
+## Установка и Запуск с Docker
 
-* System dependencies
+Для работы с проектом необходимо иметь установленные Docker и Docker Compose. Следуйте инструкциям ниже для запуска проекта:
 
-* Configuration
+1. Склонируйте репозиторий:
 
-* Database creation
+   ```sh
+   git clone git@github.com:EskovDMTA/uchi_ru_test_task.git
+   cd uchi_ru_test_task
 
-* Database initialization
+2. Соберите Docker контейнер:
 
-* How to run the test suite
+   ```sh
+   docker-compose build
 
-* Services (job queues, cache servers, search engines, etc.)
+3. Запустите проект:
 
-* Deployment instructions
+   ```sh
+   docker-compose up
 
-* ...
+После запуска приложение будет доступно по адресу http://localhost:3000.
+
+## API Документация
+
+API спецификация доступна по адресу  http://localhost:3000/api-docs
+
+В проекте реализован API, позволяющий управлять ресурсами `students` и `classes`. Ниже представлена документация к API.
+
+### Endpoints
+
+#### Студенты
+
+- `POST /students` - регистрация нового студента.
+- `DELETE /students/{user_id}` - удаление студента по его ID.
+
+#### Классы
+
+- `GET /schools/{school_id}/classes` - получение списка классов определенной школы.
+- `GET /schools/{school_id}/classes/{class_id}/students` - получение списка студентов определенного класса.
