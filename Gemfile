@@ -11,6 +11,15 @@ gem "pg", "~> 1.1"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 
+gem 'grape'
+gem 'grape-entity'
+gem 'grape_on_rails_routes'
+gem 'faker'
+
+gem 'rswag-ui'
+
+gem 'jwt'
+
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 
@@ -38,6 +47,11 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
+  gem 'minitest'
+  gem 'rack-test'
+  gem 'rubocop'
+  gem 'rubocop-minitest', require: false
+  gem 'rubocop-rails', require: false
 end
 
 group :development do
