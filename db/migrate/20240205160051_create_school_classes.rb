@@ -9,5 +9,6 @@ class CreateSchoolClasses < ActiveRecord::Migration[7.1]
 
       t.timestamps
     end
+    add_index :school_classes, %i[number letter], unique: true, name: 'index_school_classes_on_number_and_letter_unique'
   end
 end
