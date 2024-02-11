@@ -20,6 +20,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_05_160405) do
     t.integer "students_count", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["number", "letter"], name: "index_school_classes_on_number_and_letter_unique", unique: true
   end
 
   create_table "students", force: :cascade do |t|
